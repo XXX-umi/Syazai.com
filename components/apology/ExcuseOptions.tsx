@@ -33,11 +33,11 @@ export function ExcuseOptions({
   };
 
   return (
-    <div className="bg-zinc-50 rounded-lg border border-zinc-100 p-4">
+    <div className="bg-blue-50 rounded-lg border border-blue-100 p-4">
       <div className="flex items-center gap-2 mb-4">
-        <Ban className="h-4 w-4 text-zinc-500" />
-        <h4 className="font-medium text-sm text-zinc-700">言い訳オプション</h4>
-        <span className="text-xs text-zinc-400">(任意)</span>
+        <Ban className="h-4 w-4 text-blue-900" />
+        <h4 className="font-medium text-sm text-blue-900">言い訳オプション</h4>
+        <span className="text-xs text-zinc-500">(任意)</span>
       </div>
 
       <div className="space-y-3">
@@ -55,12 +55,12 @@ export function ExcuseOptions({
               )}
             >
               <div className="flex items-center gap-2">
-                <Icon className={cn('h-4 w-4', isSelected ? 'text-zinc-700' : 'text-zinc-400')} />
+                <Icon className={cn('h-4 w-4', isSelected ? 'text-blue-900' : 'text-zinc-400')} />
                 <Label
                   htmlFor={`excuse-${type}`}
                   className={cn(
                     'text-sm cursor-pointer',
-                    isSelected ? 'text-zinc-900 font-medium' : 'text-zinc-600'
+                    isSelected ? 'text-blue-900 font-medium' : 'text-zinc-600'
                   )}
                 >
                   {label}
@@ -71,7 +71,7 @@ export function ExcuseOptions({
                 checked={isSelected}
                 onCheckedChange={(checked) => handleToggle(type, checked)}
                 disabled={!isAvailable}
-                className="data-[state=checked]:bg-zinc-900"
+                className="data-[state=checked]:bg-blue-900"
               />
             </div>
           );

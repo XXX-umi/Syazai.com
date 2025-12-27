@@ -27,11 +27,11 @@ export function Checklist({ items }: ChecklistProps) {
 
   return (
     <div className="bg-white rounded-xl border border-zinc-200 overflow-hidden">
-      <div className="p-4 border-b border-zinc-100">
+      <div className="p-4 border-b border-zinc-100 bg-blue-50">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <ListChecks className="h-5 w-5 text-zinc-600" />
-            <h3 className="font-semibold text-zinc-900">送信前チェックリスト</h3>
+            <ListChecks className="h-5 w-5 text-blue-900" />
+            <h3 className="font-semibold text-blue-900">送信前チェックリスト</h3>
           </div>
           <span className="text-xs text-zinc-500">
             {checkedItems.size}/{items.length}
@@ -41,7 +41,7 @@ export function Checklist({ items }: ChecklistProps) {
           <div
             className={cn(
               'h-full transition-all duration-300 rounded-full',
-              allChecked ? 'bg-green-500' : 'bg-zinc-400'
+              allChecked ? 'bg-green-500' : 'bg-blue-900'
             )}
             style={{ width: `${progress}%` }}
           />

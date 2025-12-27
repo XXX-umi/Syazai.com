@@ -46,16 +46,16 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-zinc-100">
       <header className="border-b border-zinc-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <AlertTriangle className="h-6 w-6 text-zinc-900" />
-            <span className="font-bold text-xl tracking-tight text-zinc-900">Syazai.com</span>
+            <AlertTriangle className="h-6 w-6 text-blue-900" />
+            <span className="font-bold text-xl tracking-tight text-blue-900">Syazai.com</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm text-zinc-600">
-            <a href="#categories" className="hover:text-zinc-900 transition-colors">カテゴリー</a>
-            <a href="#about" className="hover:text-zinc-900 transition-colors">使い方</a>
+            <a href="#categories" className="hover:text-blue-900 transition-colors">カテゴリー</a>
+            <a href="#about" className="hover:text-blue-900 transition-colors">使い方</a>
           </nav>
         </div>
       </header>
@@ -66,7 +66,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,0,0,0.02),transparent_50%)]" />
 
           <div className="relative max-w-4xl mx-auto px-4 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-zinc-100 text-zinc-600 text-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-blue-50 text-blue-900 text-sm border border-blue-100">
               <AlertTriangle className="h-4 w-4" />
               <span>緊急時に、すぐ使える</span>
             </div>
@@ -75,7 +75,7 @@ export default function HomePage() {
               あらゆるミスの<br className="md:hidden" />
               <span className="relative">
                 「正解」
-                <span className="absolute -bottom-1 left-0 right-0 h-3 bg-zinc-200/50 -z-10" />
+                <span className="absolute -bottom-1 left-0 right-0 h-3 bg-blue-100 -z-10" />
               </span>
               がここにある。
             </h1>
@@ -94,7 +94,7 @@ export default function HomePage() {
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
                   onFocus={() => searchQuery && setShowResults(true)}
-                  className="w-full h-14 pl-12 pr-4 text-lg border-2 border-zinc-200 rounded-xl shadow-sm focus:border-zinc-400 focus:ring-zinc-400 bg-white"
+                  className="w-full h-14 pl-12 pr-4 text-lg border-2 border-zinc-200 rounded-xl shadow-sm focus:border-blue-900 focus:ring-blue-900 bg-white"
                 />
               </div>
 
@@ -129,7 +129,7 @@ export default function HomePage() {
                 <button
                   key={term}
                   onClick={() => handleSearch(term)}
-                  className="px-3 py-1 bg-zinc-100 hover:bg-zinc-200 rounded-full text-zinc-700 transition-colors"
+                  className="px-3 py-1 bg-blue-50 hover:bg-blue-100 rounded-full text-blue-900 transition-colors border border-blue-100"
                 >
                   {term}
                 </button>
@@ -159,11 +159,11 @@ export default function HomePage() {
                 return (
                   <Card
                     key={category.id}
-                    className="group hover:shadow-lg transition-all duration-300 border-zinc-200 hover:border-zinc-300"
+                    className="group hover:shadow-lg transition-all duration-300 border-zinc-200 hover:border-blue-200"
                   >
                     <CardHeader>
-                      <div className="w-12 h-12 rounded-lg bg-zinc-100 flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition-colors">
-                        <Icon className="h-6 w-6 text-zinc-700" />
+                      <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+                        <Icon className="h-6 w-6 text-blue-900" />
                       </div>
                       <CardTitle className="text-xl text-zinc-900">{category.name}</CardTitle>
                       <CardDescription className="text-zinc-500">
@@ -221,7 +221,7 @@ export default function HomePage() {
                 },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-zinc-900 text-white font-bold text-sm mb-4">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-900 text-white font-bold text-sm mb-4">
                     {item.step}
                   </div>
                   <h3 className="font-semibold text-lg text-zinc-900 mb-2">{item.title}</h3>
@@ -236,8 +236,8 @@ export default function HomePage() {
       <footer className="border-t border-zinc-200 bg-white py-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <AlertTriangle className="h-5 w-5 text-zinc-600" />
-            <span className="font-bold text-zinc-900">Syazai.com</span>
+            <AlertTriangle className="h-5 w-5 text-blue-900" />
+            <span className="font-bold text-blue-900">Syazai.com</span>
           </div>
           <p className="text-sm text-zinc-500">
             あらゆるミスの「正解」を、あなたに。

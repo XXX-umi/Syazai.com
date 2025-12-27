@@ -81,7 +81,7 @@ export default function SituationDetailPage() {
       <div className="min-h-screen bg-zinc-50">
         <header className="border-b border-zinc-200 bg-white sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 py-4">
-            <Link href="/" className="flex items-center gap-2 text-zinc-600 hover:text-zinc-900">
+            <Link href="/" className="flex items-center gap-2 text-zinc-600 hover:text-blue-900">
               <ArrowLeft className="h-5 w-5" />
               <span>トップに戻る</span>
             </Link>
@@ -93,7 +93,7 @@ export default function SituationDetailPage() {
           <p className="text-zinc-500 mb-6">指定されたシチュエーションは存在しません。</p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900 text-white rounded-lg hover:bg-zinc-800 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             トップに戻る
@@ -117,15 +117,15 @@ export default function SituationDetailPage() {
           <div className="flex items-center gap-4">
             <Link
               href="/"
-              className="flex items-center gap-2 text-zinc-600 hover:text-zinc-900 transition-colors"
+              className="flex items-center gap-2 text-zinc-600 hover:text-blue-900 transition-colors"
             >
               <ArrowLeft className="h-5 w-5" />
               <span className="hidden sm:inline">戻る</span>
             </Link>
             <div className="h-6 w-px bg-zinc-200" />
             <Link href="/" className="flex items-center gap-2">
-              <AlertTriangle className="h-5 w-5 text-zinc-900" />
-              <span className="font-bold text-zinc-900">Syazai.com</span>
+              <AlertTriangle className="h-5 w-5 text-blue-900" />
+              <span className="font-bold text-blue-900">Syazai.com</span>
             </Link>
           </div>
           <Badge className={severity.color}>{severity.label}</Badge>
@@ -141,8 +141,8 @@ export default function SituationDetailPage() {
         <div className="grid lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-white rounded-xl border border-zinc-200 overflow-hidden">
-              <div className="p-4 border-b border-zinc-100 bg-zinc-50">
-                <h2 className="font-semibold text-zinc-900 flex items-center gap-2">
+              <div className="p-4 border-b border-zinc-100 bg-blue-50">
+                <h2 className="font-semibold text-blue-900 flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5" />
                   謝罪生成コックピット
                 </h2>
@@ -150,14 +150,14 @@ export default function SituationDetailPage() {
 
               <div className="p-4 space-y-6">
                 <div>
-                  <h3 className="text-sm font-medium text-zinc-700 mb-3">謝罪の相手</h3>
+                  <h3 className="text-sm font-medium text-blue-900 mb-3">謝罪の相手</h3>
                   <Tabs value={recipient} onValueChange={(v) => setRecipient(v as RecipientType)}>
                     <TabsList className="grid grid-cols-4 w-full bg-zinc-100 p-1">
                       {recipientOptions.map(({ value, label, icon: Icon }) => (
                         <TabsTrigger
                           key={value}
                           value={value}
-                          className="flex items-center gap-1.5 text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
+                          className="flex items-center gap-1.5 text-xs sm:text-sm data-[state=active]:bg-blue-900 data-[state=active]:text-white data-[state=active]:shadow-sm"
                         >
                           <Icon className="h-4 w-4" />
                           <span className="hidden sm:inline">{label}</span>
@@ -168,14 +168,14 @@ export default function SituationDetailPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-sm font-medium text-zinc-700 mb-3">送信手段</h3>
+                  <h3 className="text-sm font-medium text-blue-900 mb-3">送信手段</h3>
                   <Tabs value={method} onValueChange={(v) => setMethod(v as MethodType)}>
                     <TabsList className="grid grid-cols-3 w-full bg-zinc-100 p-1">
                       {methodOptions.map(({ value, label, icon: Icon }) => (
                         <TabsTrigger
                           key={value}
                           value={value}
-                          className="flex items-center gap-1.5 data-[state=active]:bg-white data-[state=active]:shadow-sm"
+                          className="flex items-center gap-1.5 data-[state=active]:bg-blue-900 data-[state=active]:text-white data-[state=active]:shadow-sm"
                         >
                           <Icon className="h-4 w-4" />
                           {label}
@@ -196,9 +196,9 @@ export default function SituationDetailPage() {
             </div>
 
             <div className="bg-white rounded-xl border border-zinc-200 overflow-hidden">
-              <div className="p-4 border-b border-zinc-100">
-                <h2 className="font-semibold text-zinc-900">生成された謝罪文</h2>
-                <p className="text-xs text-zinc-500 mt-1">
+              <div className="p-4 border-b border-zinc-100 bg-blue-50">
+                <h2 className="font-semibold text-blue-900">生成された謝罪文</h2>
+                <p className="text-xs text-zinc-600 mt-1">
                   必要に応じて編集してご利用ください
                 </p>
               </div>
